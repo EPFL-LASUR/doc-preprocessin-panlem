@@ -1,0 +1,45 @@
+:root {
+  --md-primary-fg-color: #169D94;
+  --md-primary-fg-color--light: #169D94;
+}
+
+.md-header {
+  background-color: #243E90 !important;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p {
+  text-align: justify;
+}
+
+
+.md-header .md-header-nav {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+}
+
+
+.md-header .md-search {
+  display: inline-flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.md-header .md-search::after {
+  content: '';
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  margin-left: 1rem;
+  background-image: url('../images/EPFL_logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}

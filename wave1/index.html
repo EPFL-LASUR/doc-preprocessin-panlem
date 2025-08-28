@@ -1,0 +1,1105 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../wave3/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Vague 1 Mobilité I - Documentation pré-processing Panel Lémanique</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#vague-1-mobilite-i" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href=".." title="Documentation pré-processing Panel Lémanique" class="md-header__button md-logo" aria-label="Documentation pré-processing Panel Lémanique" data-md-component="logo">
+      
+  <img src="../images/Logo-Panel.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentation pré-processing Panel Lémanique
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Vague 1 Mobilité I
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Documentation pré-processing Panel Lémanique" class="md-nav__button md-logo" aria-label="Documentation pré-processing Panel Lémanique" data-md-component="logo">
+      
+  <img src="../images/Logo-Panel.png" alt="logo">
+
+    </a>
+    Documentation pré-processing Panel Lémanique
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Accueil
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Vague 1 Mobilité I
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vague 1 Mobilité I
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fonction-recoder_adjectifs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonction recoder_adjectifs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonction-get_section" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonction get_section
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonction-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonction documentation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonction-write_files_participants" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonction write_files_participants
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonction-write_files_questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonction write_files_questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonction-write_files_survey_completion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonction write_files_survey_completion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonction-write_label_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonction write_label_file
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonction-write_file_section" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonction write_file_section
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonction-write_file_answers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonction write_file_answers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonction-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonction main
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fonction main">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tableau-1-recodage-de-q41" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tableau 1 – Recodage de Q41
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tableau-2-recodage-de-q86" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tableau 2 – Recodage de Q86
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wave3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vague 3 Mobilité II
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pdcn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vague acceptabilité sociale de mesures d'aménagement du territoire
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rythme/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vague rythmes et temporalités de mobilité
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ete/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vague loisirs été
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hiver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vague loisirs hiver
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contact
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fonction-recoder_adjectifs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonction recoder_adjectifs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonction-get_section" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonction get_section
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonction-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonction documentation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonction-write_files_participants" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonction write_files_participants
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonction-write_files_questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonction write_files_questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonction-write_files_survey_completion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonction write_files_survey_completion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonction-write_label_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonction write_label_file
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonction-write_file_section" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonction write_file_section
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonction-write_file_answers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonction write_file_answers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonction-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonction main
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fonction main">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tableau-1-recodage-de-q41" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tableau 1 – Recodage de Q41
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tableau-2-recodage-de-q86" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tableau 2 – Recodage de Q86
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="vague-1-mobilite-i">Vague 1: Mobilité I</h1>
+<p>Cette page documente le preprocessing de la première vague du Panel Lémanique effectué dans le fichier <code>wave1-alexander.R</code>.</p>
+<h2 id="fonction-recoder_adjectifs">Fonction <code>recoder_adjectifs</code></h2>
+<ul>
+<li>Description: recode les questions 97 à 100 afin de les harmoniser avec les mêmes questions de la vague 3. Retourne pour chaque question trois variables (e.g.: <code>Q97_1</code>, <code>Q97_2</code>et <code>Q97_3</code>) avec les adjectifs labellés de 1 à 24</li>
+<li>Input: les données brutes de la vague 1, le suffixe, indiquant le mode de transport dont la question traite (e.g. <code>voiture</code>), ainsi que le nom complet de la questions (e.g.: <code>Q97</code>)</li>
+<li>Output: les données brutes de la vague 1 avec les questions 97 à 100 recodées</li>
+<li>Détail:</li>
+</ul>
+<pre><code class="language-r">pattern &lt;- paste0(&quot;_&quot;, suffixe, &quot;$&quot;)
+texte_col &lt;- paste0(&quot;Autre_TEXTE_&quot;, suffixe)
+autre_col &lt;- paste0(&quot;Autre_&quot;, suffixe)
+possible_cols &lt;- names(data)[stringr::str_detect(names(data), pattern)]
+adjectif_cols &lt;- possible_cols[!(possible_cols %in% c(texte_col, autre_col))]
+</code></pre>
+<p>Détecte toutes les colonnes traitant d'un mode de transport, et ne garde que les colonnes avec des valeurs numériques.</p>
+<pre><code class="language-r">long_data &lt;- data %&gt;%
+  dplyr::select(IDNO, dplyr::all_of(adjectif_cols)) %&gt;%
+  tidyr::pivot_longer(
+    cols = -IDNO,
+    names_to = &quot;adjectif_var&quot;,
+    values_to = &quot;selected&quot;
+  ) %&gt;%
+  dplyr::filter(selected == 1) %&gt;%
+  dplyr::mutate(adjectif = stringr::str_remove(adjectif_var, paste0(&quot;_&quot;, suffixe)))
+</code></pre>
+<p>Passage en format à l'aide de la fonction <code>pivot_longer</code> en ne gardant que les réponses cochées et suppression du suffixe du nom de la variable.</p>
+<pre><code class="language-r">dictionnaire &lt;- long_data %&gt;%
+  dplyr::distinct(adjectif) %&gt;%
+  dplyr::arrange(adjectif) %&gt;%
+  dplyr::mutate(code = dplyr::row_number())
+</code></pre>
+<p>Création du dictionnaire des adjectifs</p>
+<pre><code class="language-r">coded_data &lt;- long_data %&gt;%
+  dplyr::left_join(dictionnaire, by = &quot;adjectif&quot;) %&gt;%
+  dplyr::select(IDNO, code)
+
+grouped &lt;- coded_data %&gt;%
+  dplyr::group_by(IDNO) %&gt;%
+  dplyr::summarise(codes = list(sort(code)), .groups = &quot;drop&quot;)
+</code></pre>
+<p>Crée une liste des adjectifs choisis par chaque participant·e</p>
+<pre><code class="language-r">wide_data &lt;- grouped %&gt;%
+  tidyr::unnest_wider(codes, names_sep = &quot;_&quot;) %&gt;%
+  dplyr::rename_with(~ paste0(question_nom, &quot;_&quot;, seq_along(.)), starts_with(&quot;codes_&quot;))
+</code></pre>
+<p>Retour en format large, renommage des colonnes en <code>Q97_1</code>, <code>Q97_2</code>, etc ...</p>
+<pre><code class="language-r">adjective_list &lt;- dictionnaire$adjectif[!is.na(dictionnaire$adjectif) &amp; dictionnaire$adjectif != &quot;&quot;]
+labels &lt;- setNames(seq_along(adjective_list), adjective_list)
+wide_data &lt;- wide_data %&gt;%
+  dplyr::mutate(
+    dplyr::across(
+      -IDNO,
+      ~ haven::labelled(.x, labels)
+    )
+  )
+</code></pre>
+<p>Les colonnes sont labellisées</p>
+<pre><code class="language-r">data_final &lt;- data %&gt;%
+  dplyr::select(-dplyr::all_of(adjectif_cols)) %&gt;%
+  dplyr::select(-dplyr::all_of(paste0(&quot;Autre_&quot;, suffixe))) %&gt;%
+  dplyr::rename(!!paste0(question_nom, &quot;_TEXTE&quot;) := dplyr::all_of(texte_col)) %&gt;%
+  dplyr::left_join(wide_data, by = &quot;IDNO&quot;)
+</code></pre>
+<p>Les nouvelles colonnes sont rajoutées au database de base, les anciennes sont supprimées et les colonnes textes sont renommées en <code>Q97_TEXTE</code>, <code>Q98_TEXTE</code>, etc ...</p>
+<h2 id="fonction-get_section">Fonction <code>get_section</code></h2>
+<ul>
+<li>Description: retourne la section du questionnaire dont fait partie une questions</li>
+<li>Input: le numéro de la question</li>
+<li>Output: le nom de la section</li>
+</ul>
+<h2 id="fonction-documentation">Fonction <code>documentation</code></h2>
+<ul>
+<li>Description: permet d'obtenir une documentation de toutes les variables dans la vague 1</li>
+<li>Input: les données brutes de la vague 1</li>
+<li>Output: un fichier csv avec le nom de la variable, le texte de la variable et les labels de la variable</li>
+</ul>
+<h2 id="fonction-write_files_participants">Fonction <code>write_files_participants</code></h2>
+<ul>
+<li>Description: permet d'obtenir toutes les informations relatives aux particpant·es de la vague 1</li>
+<li>Input: les données brutes de la vague 1</li>
+<li>Output: un fichier csv avec une ligne par participant·e et les informations relatives aux participant·es de la vague 1, ainsi qu'un fichier <em>labels</em> détaillant les labels des variables dans le premier fichier</li>
+</ul>
+<h2 id="fonction-write_files_questions">Fonction <code>write_files_questions</code></h2>
+<ul>
+<li>Description: permet de lister les questions posées aux participant·es dans cette vague</li>
+<li>Input: les données brutes de la vague 1</li>
+<li>Output: un fichier csv contenant les variables des questions, le texte des questions et leur section dans le questionnaire (obtenue avec la fonction get_section, voir <a href="#fonction-get_section"><code>get_section</code></a>), ainsi qu'un fichier <em>labels</em>, détaillant les labels des questions</li>
+</ul>
+<h2 id="fonction-write_files_survey_completion">Fonction <code>write_files_survey_completion</code></h2>
+<ul>
+<li>Description: renvoie les métadonnées de l'enquête</li>
+<li>Input: les données brutes de la vague 1</li>
+<li>Output: un fichier csv contenant pour chaque participant·e la liste des métadonnées</li>
+</ul>
+<h2 id="fonction-write_label_file">Fonction <code>write_label_file</code></h2>
+<ul>
+<li>Description: permet d'écrire tout les csv <em>labels</em>. Retire les labels pour les colonnes indiquées à l'aide de la fonction <code>get_labels</code></li>
+<li>Input: les données brutes de la vague 1, les colonnes dont il faut retirer les labels, et le nom final du fichier csv</li>
+<li>Output: un fichier csv contenant les labels des colonnes indiquées</li>
+</ul>
+<h2 id="fonction-write_file_section">Fonction <code>write_file_section</code></h2>
+<ul>
+<li>Description: permet d'obtenir les sections du questionnaire de la vague 1</li>
+<li>Input: aucun</li>
+<li>Output: un fichier csv contenant les sections du questionnaire</li>
+</ul>
+<h2 id="fonction-write_file_answers">Fonction <code>write_file_answers</code></h2>
+<ul>
+<li>Description: permet d'obtenir les réponses aux questions par les participantes. Affiche une réponse par participant·es par ligne.</li>
+<li>Input: les données brutes de la vague 1</li>
+<li>Output: un fichier csv avec une réponse par question et par participant·e par ligne</li>
+<li>Détail:</li>
+</ul>
+<pre><code class="language-r">participants_colnames &lt;- c(&quot;group&quot;,&quot;pays&quot;,&quot;gp_age_source&quot;,&quot;numero_insee&quot;,&quot;numero_ofs&quot;,&quot;CP_source&quot;,&quot;Localité_source&quot;)
+  extra_colnames &lt;- c(&quot;wgt_socio&quot;,  &quot;wgt_cant_trim&quot;,    &quot;wgt_agg_trim&quot;, &quot;wgt_cant_trim_gps&quot;,    &quot;wgt_agg_trim_gps&quot;, &quot;wgt_cant_trim_v2&quot;, &quot;wgt_agg_trim_v2&quot;)
+  responses &lt;- data |&gt;
+    dplyr::select(
+      -all_of(c(participants_colnames, extra_colnames))
+    ) |&gt;
+    zap_all()
+</code></pre>
+<p>Ne sélectionne que les colonnes avec les questions, et applique tout les fonctions de <code>haven::zap_*</code> avec <code>zap_all</code></p>
+<pre><code class="language-r">responses &lt;- responses |&gt; 
+    dplyr::mutate(dplyr::across(tidyselect::where(is.character), ~ remove_whitespace(.x))) |&gt;
+    dplyr::mutate(dplyr::across(tidyselect::everything(), ~ readr::parse_guess(as.character(.x))))
+</code></pre>
+<p>Supprime tout les espaces au début d'une chaîne de caractère et cherche à obtenir le type de données</p>
+<pre><code class="language-r">response_texts &lt;- pivot_responses()
+response_values &lt;- pivot_responses()
+</code></pre>
+<p>Pivote les tableaux</p>
+<h2 id="fonction-main">Fonction <code>main</code></h2>
+<ul>
+<li>Description: nettoye les données et obtiens tout les csv grâce aux fonctions décrites plus haut</li>
+<li>Input: aucun</li>
+<li>Output: aucun</li>
+<li>Détail:</li>
+</ul>
+<pre><code class="language-r">get_data_folder &lt;- function() {
+    os &lt;- Sys.info()[[&quot;sysname&quot;]]
+
+    if (os == &quot;Linux&quot;) {
+      return(&quot;/mnt/lasur/&quot;)  
+    } else if (os == &quot;Darwin&quot;) {
+      return(&quot;/Volumes/LASUR/&quot;)  
+    } else if (os == &quot;Windows&quot;) {
+      return(&quot;//enac1files.epfl.ch/LASUR&quot;)  
+    } else {
+      stop(&quot;Unsupported OS&quot;)
+    }
+  }
+</code></pre>
+<p>Détecte l'OS de l'utilisateur et essaye d'obtenir l'emplacement du drive lasur</p>
+<pre><code class="language-r"># Suppress participants where data has to be erased
+  id_suppress &lt;- c(&quot;CH21089&quot;, &quot;FR3456&quot;, &quot;CH18003&quot;)
+  wave1_data &lt;- wave1_data %&gt;% 
+    dplyr::filter(!IDNO %in% id_suppress)
+</code></pre>
+<p>Supprime les participant·es ayant demandé la suppression de leurs données</p>
+<pre><code class="language-r">  wave1_data &lt;- wave1_data[wave1_data$Participe == 1,]
+</code></pre>
+<p>Ne garde que les participant·es ayant complété entièrement le questionnaire</p>
+<pre><code class="language-r">  wave1_data &lt;- recoder_adjectifs(wave1_data, suffixe = &quot;voiture&quot;, question_nom = &quot;Q97&quot;)
+  wave1_data &lt;- recoder_adjectifs(wave1_data, suffixe = &quot;train&quot;, question_nom = &quot;Q98&quot;)
+  wave1_data &lt;- recoder_adjectifs(wave1_data, suffixe = &quot;autresTPs&quot;, question_nom = &quot;Q99&quot;)
+  wave1_data &lt;- recoder_adjectifs(wave1_data, suffixe = &quot;velo&quot;, question_nom = &quot;Q100&quot;)
+
+  labels_questions &lt;- list(
+    Q97 = &quot;Pouvez-vous citer trois adjectifs qui vous paraissent les plus adaptés pour qualifier la voiture ?&quot;,
+    Q98 = &quot;Pouvez-vous citer trois adjectifs qui vous paraissent les plus adaptés pour qualifier le train (y compris Léman Express) ?&quot;,
+    Q99 = &quot;Pouvez-vous citer trois adjectifs qui vous paraissent les plus adaptés pour qualifier les autres transports publics (métro, tram, bus) ?&quot;,
+    Q100 = &quot;Pouvez-vous citer trois adjectifs qui vous paraissent les plus adaptés pour qualifier le vélo (conventionnel ou électrique) ?&quot;
+  )
+
+  # Applique les labels aux questions 97 à 100
+  for (q in names(labels_questions)) {
+    vars &lt;- grep(paste0(&quot;^&quot;, q, &quot;_\\d+$&quot;), names(wave1_data), value = TRUE)
+    for (v in vars) {
+      attr(wave1_data[[v]], &quot;label&quot;) &lt;- labels_questions[[q]]
+    }
+
+    texte_col &lt;- paste0(q, &quot;_TEXTE&quot;)
+    if (texte_col %in% names(wave1_data)) {
+      attr(wave1_data[[texte_col]], &quot;label&quot;) &lt;- paste0(labels_questions[[q]], &quot; - TEXTE&quot;)
+    }
+  }
+</code></pre>
+<p>Recode les questions 97 à 100 pour qu'elle soient semblable au question 97 à 100 dans la vague 3 en utilisant la fonction <code>recoder_adjectifs</code> (voir <a href="./#fonction-recoder_adjectifs">adjectifs</a>).</p>
+<pre><code class="language-r">  wave1_data &lt;- wave1_data |&gt;
+    dplyr::rename(
+      participant_code = IDNO,
+      pays = Pays,
+      group = Groupe,
+      gp_age_source = GP_Age_source,
+      numero_insee = Numéro_INSEE,
+      numero_ofs = Numéro_OFS,
+      date_naissance = Q106,
+      genre = Q107,
+      Q31_jour = jourQ31,
+      check_genre = Checksex,
+      check_age = checkage
+    )
+
+  names(wave1_data) &lt;- sub(&quot;^satisfaction&quot;, &quot;Q130_satisfaction&quot;, names(wave1_data))
+  names(wave1_data) &lt;- sub(&quot;^latitude_(.*)&quot;, &quot;\\1_latitude&quot;, names(wave1_data))
+  names(wave1_data) &lt;- sub(&quot;^longitude_(.*)&quot;, &quot;\\1_longitude&quot;, names(wave1_data))
+</code></pre>
+<p>Renomme plusieurs variables afin d'harmoniser le nom de certaines variables récurrentes entre les vagues et afin que toutes les variables de questions commencent par "Q".</p>
+<pre><code class="language-r"># Recodage de Q41 pour qu'elle match la W3
+  q41_label &lt;- attr(wave1_data$Q41, &quot;label&quot;)
+  vals &lt;- as.integer(wave1_data$Q41)
+  vals_recoded &lt;- 8 - vals
+
+  old_labels &lt;- attr(wave1_data$Q41, &quot;labels&quot;)
+  new_labels &lt;- setNames(8 - as.integer(old_labels), names(old_labels))
+  new_labels &lt;- new_labels[order(new_labels)]
+
+  wave1_data$Q41 &lt;- haven::labelled(vals_recoded, new_labels)
+  attr(wave1_data$Q41, &quot;label&quot;) &lt;- q41_label
+</code></pre>
+<p>La question 41 ayant été codée différemment par FORS entre la W1 et la W3, elle a été recodée afin d'être harmonisée entre les deux vagues</p>
+<h5 id="tableau-1-recodage-de-q41">Tableau 1 – Recodage de Q41</h5>
+<table>
+<thead>
+<tr>
+<th>Réponses</th>
+<th>Ancien labellage</th>
+<th>Nouveau labellage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7 jours par semaine</td>
+<td>1</td>
+<td>7</td>
+</tr>
+<tr>
+<td>6 jours par semaine</td>
+<td>2</td>
+<td>6</td>
+</tr>
+<tr>
+<td>5 jours par semaine</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr>
+<td>4 jours par semaine</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>3 jours par semaine</td>
+<td>5</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2 jours par semaine</td>
+<td>6</td>
+<td>2</td>
+</tr>
+<tr>
+<td>1 jour par semaine</td>
+<td>7</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Moins d’un jour par semaine</td>
+<td>8</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-r"># Recodage de Q86 pour qu'elle match la W3
+  for (var in c(&quot;Q86_1&quot;, &quot;Q86_2&quot;, &quot;Q86_3&quot;)) {
+    var_label &lt;- attr(wave1_data[[var]], &quot;label&quot;)
+
+    old_labels &lt;- attr(wave1_data[[var]], &quot;labels&quot;)
+    new_labels &lt;- setNames(as.integer(old_labels) - 1, names(old_labels))
+
+    new_values &lt;- as.integer(wave1_data[[var]]) - 1
+    wave1_data[[var]] &lt;- haven::labelled(new_values, new_labels)
+
+    attr(wave1_data[[var]], &quot;label&quot;) &lt;- var_label
+  }
+</code></pre>
+<p>La même chose a eu lieu avec la Q86 qu'avec la Q41. </p>
+<h5 id="tableau-2-recodage-de-q86">Tableau 2 – Recodage de Q86</h5>
+<table>
+<thead>
+<tr>
+<th>Réponses</th>
+<th>Ancien labellage</th>
+<th>Nouveau labellage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aucun-e</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>4</td>
+<td>3</td>
+</tr>
+<tr>
+<td>4</td>
+<td>5</td>
+<td>4</td>
+</tr>
+<tr>
+<td>5</td>
+<td>6</td>
+<td>5</td>
+</tr>
+<tr>
+<td>6</td>
+<td>7</td>
+<td>6</td>
+</tr>
+<tr>
+<td>7</td>
+<td>8</td>
+<td>7</td>
+</tr>
+<tr>
+<td>8</td>
+<td>9</td>
+<td>8</td>
+</tr>
+<tr>
+<td>9</td>
+<td>10</td>
+<td>9</td>
+</tr>
+<tr>
+<td>10+</td>
+<td>11</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-r">if (!dir.exists(here::here(&quot;data/wave1&quot;))) {
+    dir.create(here::here(&quot;data/wave1&quot;), recursive = TRUE)
+  }
+</code></pre>
+<p>Création du dossier <code>data/wave1</code> où sont enregistrés les fichiers csv.</p>
+<pre><code class="language-r">  doubles_to_convert &lt;- grep(&quot;^Q|^(genre|date_naissance)$&quot;, names(wave1_data), value = TRUE)
+  wave1_data[doubles_to_convert] &lt;- double_to_integer(wave1_data[doubles_to_convert])
+</code></pre>
+<p>Certaines variables étaient des <code>&lt;double&gt;</code> alors qu'en réalité, elles ne contenaient que des <code>&lt;integer&gt;</code>. Afin de permettre à OPAL d'assigner le bon type à chaque variable et d'exécuter ses analyses sans fautes, ces colonnes ont été transformées en <code>&lt;integer&gt;</code>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>
