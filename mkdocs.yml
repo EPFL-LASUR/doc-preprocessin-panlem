@@ -2,3 +2,22 @@ site_name: Documentation pré-processing Panel Lémanique
 theme:
   name: material
   language: fr
+  palette:
+    primary: custom
+  logo: images/Logo-Panel.png
+  
+nav:
+  - Accueil: index.md
+  - Vague 1 Mobilité I: wave1.md
+  - Vague 3 Mobilité II: wave3.md
+  - Vague acceptabilité sociale de mesures d'aménagement du territoire: pdcn.md
+  - Vague rythmes et temporalités de mobilité: rythme.md
+  - Vague loisirs été: ete.md
+  - Vague loisirs hiver: hiver.md
+  - Contact: contact.md
+  
+extra_css:
+  - css/extra.css
+  
+markdown_extensions:
+  - attr_list
