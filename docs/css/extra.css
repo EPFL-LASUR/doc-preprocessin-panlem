@@ -1,0 +1,43 @@
+:root {
+  --md-primary-fg-color: #169D94;
+  --md-primary-fg-color--light: #169D94
+}
+
+.md-header {
+  background-color: #243E90 !important
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p {
+  text-align: justify;
+}
+
+.md-header::after {
+    content: '';
+    position: absolute;
+    right: 630px;
+    top: -9px;
+    width: 80px;
+    height: 80px;
+    background-image: url('../images/EPFL_logo.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.md-header .md-header-nav {
+    display: flex;
+    align-items: center; /* centre verticalement logo et barre de recherche */
+    justify-content: space-between; /* logo à gauche, recherche à droite */
+}
+
+.md-header .md-search {
+    position: relative; /* supprime l'absolu */
+    margin-left: auto;  /* pousse la barre vers le bord droit du container */
+    margin-right: 8.5rem;
+}
