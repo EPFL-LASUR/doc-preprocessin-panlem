@@ -1,5 +1,7 @@
 # Vague 3: Mobilité II
 
+Cette page documente le preprocessing de la troisième vague fait dans le fichier `preprocessing-wave3.R`.
+
 ## Fonctions `get_section`
 
 Les deux fonctions `get_section_W1` et `get_section_W3` fonctionnent comment la fonction [`get_section`](wave1.md#fonction-get_section) de la vague 1 et permettent de récupérer les sections du questionnaire dans laquelle se trouve la question donnant en argument.

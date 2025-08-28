@@ -1,6 +1,6 @@
 # Vague 1: Mobilité I
 
-Cette page documente le preprocessing de la première vague du Panel Lémanique effectué dans le fichier `preprocess_wave1.R`.
+Cette page documente le preprocessing de la première vague du Panel Lémanique effectué dans le fichier `wave1-alexander.R`.
 
 ## Fonction `recoder_adjectifs`
 - Description: recode les questions 97 à 100 afin de les harmoniser avec les mêmes questions de la vague 3. Retourne pour chaque question trois variables (e.g.: `Q97_1`, `Q97_2`et `Q97_3`) avec les adjectifs labellés de 1 à 24

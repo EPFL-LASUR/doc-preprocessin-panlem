@@ -1,5 +1,7 @@
 # Vague loisirs été
 
+Cette page documente le preprocessing de la vague loisirs été effectué dans le fichier `preprocess_loisirs_ete.R`.
+
 ## Fonction `get_section`
 Le but est le même que dans la [vague 1](wave1.md#fonction-get_section). Néanmoins, cette vague possédait des sous-sections, la structure de la fonction est différente
 ```r
@@ -54,7 +56,7 @@ Similaire à la [vague 1](wave1.md#fonction-write_files_survey_completion)
 Similaire à la [vague 1](wave1.md#fonction-write_file_answers)
 
 ## Fonction `main`
-Similaire à la [vague 1](wave1.md#fonction-main). Les différences sont notées ci-dessous:
+Similaire à la [vague 3](wave3.md#fonction-main). Les différences sont notées ci-dessous:
 ```r
 data_ete <- data_ete %>%
   dplyr::rename_with(
